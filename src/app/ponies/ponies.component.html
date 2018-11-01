@@ -1,0 +1,11 @@
+<button (click)="refreshPonies()">Refresh</button>
+<ul>
+  <li *ngFor="let pony of ponies; even as isEven" [style.color]="isEven ? 'green' : 'black'">
+    {{pony.name}}
+  </li>
+</ul>
+<p *ngFor="let pony of newPonies | keyvalue">
+  {{pony.key}} - {{pony.value.value}}
+</p>
+<h1 nsLoggable logText="test value">{{ newPonies| fromNow}}</h1>
+<button (click)="emitEvent()">Emit Event</button>

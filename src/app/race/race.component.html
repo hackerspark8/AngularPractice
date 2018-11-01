@@ -1,0 +1,5 @@
+<h2>Races</h2>
+<button (click)="refreshRaces()">Click Me!</button>
+<p>{{races.length}} races</p>
+<input type="text" [value]="races.length" (keydown.enter)="showAlert()" />
+<h1 *ngIf="races.length > 0">Wow!</h1>
